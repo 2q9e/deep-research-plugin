@@ -11,15 +11,13 @@ Turn research questions into verifiable answers. Use the host's available search
 
 If the user explicitly invokes standalone `better-research`, let that skill own the task and do not start this plugin's mode-selection flow. Use Deep Research Engine only when the user invokes this plugin or explicitly requests its research modes.
 
-At the start of each **new independent research task**, if the user has not selected a mode, ask only this concise question before substantive research:
+The first interaction in each **new independent research task** is mode selection when the user has not already specified a mode: use the host's native **Ask Question** or structured user-input interface to ask exactly one question. Invoke this before sending a prose preamble or beginning substantive research. Present these as selectable options, with a brief description for each:
 
-**What type of research would you like?**
+- **Official** — authoritative, directly verifiable sources only.
+- **Mixed** — official evidence plus independent reporting and expert analysis.
+- **Deep Discovery** — broad public-web investigation, including archives and specialist communities.
 
-1. **Official** — authoritative, directly verifiable sources only; best for academic, school, policy, factual, and technical research.
-2. **Mixed** — official evidence plus independent reporting, expert analysis, and cross-checked community evidence; best for a practical, balanced understanding.
-3. **Deep Discovery** — broad public-web investigation including archives, forums, repositories, obscure sources, and investigative leads; best for overlooked or undocumented information.
-
-Wait for the selection before substantive research. Do not ask this again during follow-ups in the same investigation. Carry the selected mode forward until the user switches it. If a request explicitly specifies a mode, start in that mode without asking. Do not silently infer a mode from topic or intended use. Ask only this question first; do not add a preliminary questionnaire. If the host has interactive choice controls, use them; otherwise show the numbered options as text.
+Do not render the mode selector as a numbered or bulleted list in the assistant's message when a native Ask Question interface is available. Wait for the user's selection before researching. If the host has no native question interface, ask one concise natural-language question with the three choices inline; do not use a long menu as prose. Do not ask this again during follow-ups in the same investigation. Carry the selected mode forward until the user switches it. If a request explicitly specifies a mode, start in that mode without asking. Do not silently infer a mode from topic or intended use. Ask only this question first; do not add a preliminary questionnaire.
 
 Mode selects source policy; it does not limit research depth. Because this is the Deep Research Engine, broad or open-ended prompts default to extensive research and a long-form report, even when the prompt is only one sentence. Use focused effort only when the user asks for a quick/narrow answer; use standard effort for bounded research questions.
 

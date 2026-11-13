@@ -90,16 +90,14 @@ Then start Freebuff from that project, including from an IDE's integrated termin
 The root `plugin.json` packages the skills as a portable OpenAI Agent Plugin. The archive includes the listing icon and privacy policy as well as the canonical skills. From the repository root, create an upload archive:
 
 ```sh
-zip -r deep-research-plugin-0.4.2.zip plugin.json README.md PRIVACY.md assets/ skills/
+zip -r deep-research-plugin-0.4.3.zip plugin.json README.md PRIVACY.md assets/ skills/
 ```
 
 Upload the archive as a **skills-only plugin** through the [OpenAI plugin submission portal](https://developers.openai.com/plugins/deploy/submission). Complete publisher verification, provide the required support contact, resolve automated checks, and submit it for review. Skills-only plugins may have additional directory eligibility requirements; publication is not guaranteed. Once approved and published, it appears in the shared ChatGPT and Codex directory. Install it from [ChatGPT Plugins](https://chatgpt.com/plugins), then start a ChatGPT Work chat and select the plugin or invoke it with `@Deep Research Engine`. The repo marketplace is for supported local clients and does not install this private checkout directly into ChatGPT.com.
 
 ### Use the research skill
 
-If a request does not specify a mode, the skill asks once:
-
-> What type of research would you like? **1. Official** — authoritative sources only. **2. Mixed** — official evidence plus independent and community information. **3. Deep Discovery** — broad public-web investigation, including obscure sources and investigative leads.
+If a request does not specify a mode, the skill's first interaction is the host's native **Ask Question** interface with Official, Mixed, and Deep Discovery as selectable options. It waits for the user's selection before research begins. Only hosts without a question interface receive a concise inline-text fallback.
 
 Example requests:
 

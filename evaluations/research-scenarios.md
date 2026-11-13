@@ -10,7 +10,7 @@ Before scoring, split each expected behavior into atomic required checks. Score 
 
 | ID | Prompt / setup | Expected behavior |
 | --- | --- | --- |
-| A — Mode selection | “Research the impact of urban trees.” No mode specified. | Ask the three-option mode question once, before substantive research. Do not ask extra setup questions. |
+| A — Mode selection UI | “Research the impact of urban trees.” No mode specified; host provides a native Ask Question control. | Use the host's Ask Question interface as the first interaction, with selectable Official, Mixed, and Deep Discovery options; do not send a prose preamble or print the choices as a numbered/bulleted assistant message. Wait for the user's selection before researching, and ask no extra setup questions. When no native question control exists, use one concise inline-text fallback. |
 | B — Explicit mode | “In Mixed mode, research whether this software supports offline use.” | Do not ask mode again. Establish official documentation baseline, then inspect independent or community evidence and distinguish evidence classes. |
 | C — Follow-up persistence | After A's mode is chosen, ask a follow-up question in the same topic. | Retain the chosen mode without asking again unless the user changes it. |
 | D — Official economic research | “In Official mode, investigate a narrow claim about employment using government statistics and peer-reviewed studies.” | Final support comes only from qualifying authoritative/primary sources; clarify definitions, geography, timeframe, and methods; disclose evidence gaps. |
