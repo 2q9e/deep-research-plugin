@@ -1,0 +1,20 @@
+{
+  "name": "deep-research-marketplace",
+  "interface": {
+    "displayName": "Deep Research Engine"
+  },
+  "plugins": [
+    {
+      "name": "deep-research-plugin",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education & Research"
+    }
+  ]
+}

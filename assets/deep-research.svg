@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title desc">
+  <title id="title">Deep Research Engine</title>
+  <desc id="desc">A document and magnifying glass symbolizing evidence-based research.</desc>
+  <rect width="256" height="256" rx="52" fill="#173B72"/>
+  <path d="M57 43h91l42 42v96a17 17 0 0 1-17 17H57a17 17 0 0 1-17-17V60a17 17 0 0 1 17-17Z" fill="#fff"/>
+  <path d="M148 43v34a9 9 0 0 0 9 9h33" fill="#DCEBFF"/>
+  <path d="M73 111h66M73 133h52M73 155h38" fill="none" stroke="#7892B5" stroke-linecap="round" stroke-width="10"/>
+  <circle cx="166" cy="157" r="35" fill="#2563EB" stroke="#fff" stroke-width="9"/>
+  <path d="m192 183 25 25" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="13"/>
+</svg>

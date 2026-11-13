@@ -1,0 +1,13 @@
+{
+  "name": "deep-research-marketplace",
+  "description": "Evidence-first research workflows with source verification and adaptive agent coordination.",
+  "owner": {
+    "name": "2q9e"
+  },
+  "plugins": [
+    {
+      "name": "deep-research-plugin",
+      "source": "./"
+    }
+  ]
+}

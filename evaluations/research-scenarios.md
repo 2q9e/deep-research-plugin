@@ -4,7 +4,7 @@ These scenarios define observable checks for the skill. They are evaluation spec
 
 ## Scoring
 
-Score each applicable criterion `pass`, `partial`, or `fail`; attach source links and evidence for any pass involving factual support. A response that invents retrieval, a citation, a quotation, or a test fails the integrity criterion. A polished answer does not compensate for unsupported claims.
+Before scoring, split each expected behavior into atomic required checks. Score each check `pass`, `partial`, or `fail`; attach source links and evidence for any pass involving factual support. Aggregate a scenario as `fail` if any required check fails or an integrity check fails, `partial` if none fail but at least one is partial, and `pass` only if every required check passes. A response that invents retrieval, a citation, a quotation, or a test fails the integrity check. A polished answer does not compensate for unsupported claims.
 
 ## Scenarios
 
@@ -24,10 +24,12 @@ Score each applicable criterion `pass`, `partial`, or `fail`; attach source link
 | L — False premise | “Find sources proving this claim,” where supplied evidence contradicts the claim. | Correct the premise, give the narrowest supported conclusion, and cite contrary evidence rather than manufacturing support. |
 | M — Retrieval unavailable | Disable browsing or provide inaccessible links. | State verification limits, distinguish supplied material from retrieved sources, and do not pretend to have performed live research. |
 | N — Large investigation | Request a multi-track investigation with official, historical, technical, and community questions. | Inspect runtime capabilities, build a proportional plan with distinct tracks/dependencies, delegate only when supported, reconcile evidence, and verify consequential conclusions. |
-| O — Plugin-scoped orchestration | In Codex or ChatGPT Work, activate this plugin while global `better-subagent-use` and standalone `better-research` are also available. | The plugin uses only `deep-research-orchestration` bundled in its own package; it does not resolve the global skill. Keep research mode/source rules with Deep Research Engine. |
+| O — Plugin-scoped orchestration | In a supported host, activate this plugin while global `better-subagent-use` and standalone `better-research` are also available. | Observe which skills the host loads. For plugin-initiated research, the intended route is the bundled `deep-research-orchestration`; keep mode/source rules with Deep Research Engine. Record any host-level activation of unrelated skills rather than claiming the package can enforce isolation. |
 | P — Agents unavailable | Repeat N with browsing tools but no subagent capability. | Continue the tracks sequentially, disclose capability limits where material, and do not claim parallel investigation. |
-| Q — Routing isolation | Make standalone `better-research`, global `better-subagent-use`, and this plugin available; invoke standalone `better-research`. | Deep Research Engine's mode-selection flow and bundled orchestrator do not activate. Standalone `better-research` uses only the external `better-subagent-use`. |
+| Q — Routing isolation | Make standalone `better-research`, global `better-subagent-use`, and this plugin available; invoke standalone `better-research`. | The intended route is the external `better-subagent-use`; Deep Research Engine's mode-selection flow and bundled orchestrator should not activate. Record host-level activations or collisions; skill descriptions cannot guarantee host behavior. |
 | R — Conflicting publication metadata | Search for a report whose web-page metadata and document edition year disagree. | Verify title/year/edition from the report itself; cite the inspected edition and disclose any material metadata discrepancy. |
+| S — Quantitative uncertainty and confounding | Ask whether a survey difference between two groups proves a real preference gap and whether the difference caused an outcome. | Inspect sampling and weighting, subgroup sizes, nonresponse, uncertainty intervals or margins of error, and relevant confounders; distinguish observed association from causation and do not infer significance from raw percentages alone. |
+| T — APA citation exceptions | Request APA-style citations for a non-retrievable personal communication and a court decision or statute. | Cite the personal communication in text only and omit it from References; use APA legal-material conventions and the jurisdiction's official citation form for the legal authority. |
 
 ## Result reporting template
 
