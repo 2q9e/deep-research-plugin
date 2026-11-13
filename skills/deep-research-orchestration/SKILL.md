@@ -21,7 +21,7 @@ Before delegating:
 
 Map the investigation into bounded tracks by question, evidence class, or source community:
 
-1. Identify shared questions, dependencies between claims, source constraints, and verification needs.
+1. Identify shared questions, dependencies between claims, source constraints, and verification needs. Broad current-news requests often have useful independent tracks for the official event record, chronology or prior statements, and consequences or causation; use them when evidence and runtime capacity justify delegation.
 2. Map track dependencies and readiness in a small graph or checklist.
 3. Define what evidence each track needs to find and report. Resolve scope and constraints from the user's request; keep unresolved interpretations with the coordinator and clarify only when needed.
 4. Put dependent tracks later in the queue.

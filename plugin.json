@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "deep-research-plugin",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Evidence-first research with Official, Mixed, and Deep Discovery modes, claim verification, and APA 7 citations.",
   "author": {
     "name": "2q9e"
@@ -37,6 +37,9 @@
         "privacyPolicyURL": "https://github.com/2q9e/deep-research-plugin/blob/main/PRIVACY.md",
         "logo": "./assets/deep-research.svg",
         "composerIcon": "./assets/deep-research.svg"
+      },
+      "publication": {
+        "release_notes": "Version 0.3.0 sets standard effort for broad questions and adds current-news chronology, claim-source checks, and causal-uncertainty reporting."
       }
     }
   }
