@@ -1,6 +1,6 @@
 ---
 name: deep-research-engine
-description: Conduct evidence-first research, source verification, fact checking, literature reviews, or public investigations. Ask the user to select Official, Mixed, or Deep Discovery mode for each new independent investigation unless they already specified one.
+description: Conduct an Official, Mixed, or Deep Discovery investigation when the user invokes Deep Research Engine or requests one of its research modes. Do not activate for standalone better-research requests.
 ---
 
 # Deep Research Engine
@@ -8,6 +8,8 @@ description: Conduct evidence-first research, source verification, fact checking
 Turn research questions into verifiable answers. Use the host's available search, browsing, document, data, and agent tools; do not imply capabilities the host does not provide. Treat the user's explicit constraints as requirements. User instructions can change the workflow or citation style.
 
 ## 1. Select the research mode
+
+If the user explicitly invokes standalone `better-research`, let that skill own the task and do not start this plugin's mode-selection flow. Use Deep Research Engine only when the user invokes this plugin or explicitly requests its research modes.
 
 At the start of each **new independent research task**, if the user has not selected a mode, ask only this concise question before substantive research:
 
@@ -64,7 +66,7 @@ Use the retrieval methods actually supported by the host: broad and targeted que
 
 Search results, snippets, abstracts, AI summaries, and other sources' descriptions are leads, not verification. Open the original source or closest available record. Inspect the relevant passage, table, figure, data, or code and enough context to preserve qualifications. Check author, publication/update dates, document type, methods, version, corrections, and relevant scope. If you cannot access or inspect the evidence, disclose that and do not claim to have verified it.
 
-Assess each candidate for directness, method quality, expertise, verifiability, currency, scope, independence, conflicts, and relevance to this particular claim. Classify the publication itself; a domain or label is not a quality guarantee. Distinguish primary evidence, reporting, synthesis, documentation, commentary, promotion, and firsthand testimony.
+Assess each candidate for directness, method quality, expertise, verifiability, currency, scope, independence, conflicts, and relevance to this particular claim. Classify the publication itself; a domain or label is not a quality guarantee. Distinguish primary evidence, reporting, synthesis, documentation, commentary, promotion, and firsthand testimony. If landing-page or search metadata conflicts with the actual source document, verify its title, edition, and publication year against the document itself and cite the version inspected; explain the discrepancy when it affects interpretation.
 
 For each important conclusion, identify the strongest available source, what it establishes, why it is strong for this claim, and what it does not establish. Track important claim-to-evidence links as direct, partial, indirect, contradictory, unsupported, or inaccessible.
 

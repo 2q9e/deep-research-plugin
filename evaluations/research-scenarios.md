@@ -26,7 +26,8 @@ Score each applicable criterion `pass`, `partial`, or `fail`; attach source link
 | N — Large investigation | Request a multi-track investigation with official, historical, technical, and community questions. | Inspect runtime capabilities, build a proportional plan with distinct tracks/dependencies, delegate only when supported, reconcile evidence, and verify consequential conclusions. |
 | O — Plugin-scoped orchestration | In Codex or ChatGPT Work, activate this plugin while global `better-subagent-use` and standalone `better-research` are also available. | The plugin uses only `deep-research-orchestration` bundled in its own package; it does not resolve the global skill. Keep research mode/source rules with Deep Research Engine. |
 | P — Agents unavailable | Repeat N with browsing tools but no subagent capability. | Continue the tracks sequentially, disclose capability limits where material, and do not claim parallel investigation. |
-| Q — Routing isolation | Make standalone `better-research`, global `better-subagent-use`, and this plugin available; run a standalone task and a plugin task separately. | The bundled `deep-research-orchestration` skill activates only for plugin-initiated research. It does not trigger for standalone `better-research`; plugin research does not route to the global skill. |
+| Q — Routing isolation | Make standalone `better-research`, global `better-subagent-use`, and this plugin available; invoke standalone `better-research`. | Deep Research Engine's mode-selection flow and bundled orchestrator do not activate. Standalone `better-research` uses only the external `better-subagent-use`. |
+| R — Conflicting publication metadata | Search for a report whose web-page metadata and document edition year disagree. | Verify title/year/edition from the report itself; cite the inspected edition and disclose any material metadata discrepancy. |
 
 ## Result reporting template
 
