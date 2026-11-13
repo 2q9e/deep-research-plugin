@@ -1,0 +1,37 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "deep-research-plugin",
+  "version": "0.1.0",
+  "description": "Evidence-first research with Official, Mixed, and Deep Discovery modes, claim verification, and APA 7 citations.",
+  "author": {
+    "name": "2q9e"
+  },
+  "homepage": "https://github.com/2q9e/deep-research-plugin",
+  "repository": "https://github.com/2q9e/deep-research-plugin",
+  "keywords": [
+    "research",
+    "fact-checking",
+    "citations",
+    "APA",
+    "investigation"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Deep Research Engine",
+        "shortDescription": "Evidence-first research in three modes",
+        "longDescription": "Research with authoritative evidence, cross-checked community findings, or broad public-web discovery. Defaults to APA 7 citations and explicit uncertainty labels.",
+        "developerName": "2q9e",
+        "category": "Research",
+        "capabilities": ["Read"],
+        "websiteURL": "https://github.com/2q9e/deep-research-plugin",
+        "defaultPrompt": [
+          "Use Deep Research Engine to investigate this claim and trace it to the strongest available evidence.",
+          "Use Deep Research Engine in Official mode to research this topic with authoritative sources.",
+          "Use Deep Research Engine in Deep Discovery mode to investigate this obscure topic and classify what is verified and unknown."
+        ],
+        "brandColor": "#2563EB"
+      }
+    }
+  }
+}
