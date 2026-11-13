@@ -109,7 +109,7 @@ Every citation must support its attached statement. For substantial investigatio
 
 ## 8. Coordinate agents when the host supports them
 
-In Codex or ChatGPT Work, consult and follow the installed **`adaptive-subagent-orchestration`** skill when planning each investigation. Use it to decide whether delegation is worthwhile and, when it is, to structure work packages, dependencies, agent availability, and integration. It is an orchestration guide, not a source of extra tools or permissions. This plugin does not bundle that separate skill. If it is not installed or the host cannot load it, use the fallback workflow below and be explicit about unavailable agent capabilities.
+In Codex or ChatGPT Work, consult and follow this plugin's bundled **`adaptive-subagent-orchestration`** skill when planning each investigation. Use it to decide whether delegation is worthwhile and, when it is, to structure work packages, dependencies, agent availability, and integration. The bundled file is `skills/adaptive-subagent-orchestration/SKILL.md`. It is an orchestration guide, not a source of extra tools or permissions. If the host cannot load the skill or does not expose agents, use the fallback workflow below and be explicit about unavailable capabilities.
 
 Delegate only when independent tracks can improve coverage, speed, or verification enough to justify setup and synthesis. A small or tightly coupled question usually stays sequential. Never spawn agents merely to increase their number. Use the host's native agents and respect its concurrency, isolation, trust, and permission rules; do not assume agents, parallel execution, shared files, or persistent state exist.
 

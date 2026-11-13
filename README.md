@@ -48,7 +48,7 @@ If a request does not specify a mode, the skill asks once:
 
 The skill runs an adaptive investigation loop: frame the question, inspect available retrieval and agent tools, create research tracks for substantial questions, gather and revise evidence, reconcile findings, audit citations, and report unresolved questions. It keeps simple requests sequential and stops when additional searches are unlikely to improve the answer.
 
-In Codex or ChatGPT Work, the workflow consults the installed `adaptive-subagent-orchestration` skill to decide whether to delegate and to guide task decomposition, dependencies, and integration. That skill is not bundled in this repository. If it or native agents are unavailable, the research workflow proceeds sequentially and does not claim parallel work. Agent findings must include inspected sources, evidence locations, APA metadata, confidence/status, limitations, contradictions, and next leads; the coordinating agent checks consequential findings before synthesis.
+The plugin bundles the `adaptive-subagent-orchestration` skill at `skills/adaptive-subagent-orchestration/SKILL.md`. In Codex or ChatGPT Work, the research workflow consults this bundled skill to decide whether delegation is worthwhile and to guide task decomposition, dependencies, runtime inspection, and integration. It does not add agent tools or permissions. If the host cannot load skills or does not expose agents, the research workflow proceeds sequentially and does not claim parallel work. Agent findings must include inspected sources, evidence locations, APA metadata, confidence/status, limitations, contradictions, and next leads; the coordinating agent checks consequential findings before synthesis.
 
 Research state can track the selected mode, objective, completed tracks, evidence links, contradictions, open questions, and next actions. Persistent workspace notes are used only when authorized and useful.
 
@@ -63,6 +63,8 @@ See [the evaluation scenarios](evaluations/research-scenarios.md) for behavior c
 ```text
 plugin.json
 skills/
+  adaptive-subagent-orchestration/
+    SKILL.md
   deep-research-engine/
     SKILL.md
 evaluations/
