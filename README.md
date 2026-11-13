@@ -48,7 +48,7 @@ If a request does not specify a mode, the skill asks once:
 
 The skill runs an adaptive investigation loop: frame the question, inspect available retrieval and agent tools, create research tracks for substantial questions, gather and revise evidence, reconcile findings, audit citations, and report unresolved questions. It keeps simple requests sequential and stops when additional searches are unlikely to improve the answer.
 
-Users can invoke Deep Research Engine alone; they do not need to manually activate another skill. When `better-subagent-use` is available or active in Codex or ChatGPT Work, it is the sole authority for general agent orchestration: delegation decisions, runtime discovery, task contracts, scheduling, and integration. Deep Research Engine supplies the research tracks, selected-mode constraints, and evidence requirements. The plugin does not bundle a second general orchestration skill, avoiding duplicate or competing instructions when both are enabled. If `better-subagent-use` is unavailable, the plugin uses a small sequential-first fallback and delegates distinct tracks only when the host exposes agents. A skill does not add tools or permissions. Agent findings must include inspected sources, evidence locations, APA metadata, evidence status, limitations, contradictions, and next leads; the coordinating agent checks consequential findings before synthesis.
+Users can invoke Deep Research Engine alone; they do not need to manually activate another skill. The plugin uses its own namespaced `deep-research-orchestration` skill for plugin-initiated research only and never routes to the global `better-subagent-use` skill. The bundled orchestrator explicitly does not activate for standalone `better-research`. Deep Research Engine supplies research tracks, selected-mode constraints, and evidence requirements. If the bundled orchestrator cannot be loaded or the host exposes no agents, the plugin uses a sequential-first fallback. A skill does not add tools or permissions. Agent findings must include inspected sources, evidence locations, APA metadata, evidence status, limitations, contradictions, and next leads; the coordinating agent checks consequential findings before synthesis.
 
 Research state can track the selected mode, objective, completed tracks, evidence links, contradictions, open questions, and next actions. Persistent workspace notes are used only when authorized and useful.
 
@@ -63,6 +63,8 @@ See [the evaluation scenarios](evaluations/research-scenarios.md) for behavior c
 ```text
 plugin.json
 skills/
+  deep-research-orchestration/
+    SKILL.md
   deep-research-engine/
     SKILL.md
 evaluations/
