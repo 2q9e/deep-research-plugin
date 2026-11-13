@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "deep-research-plugin",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Evidence-first research with Official, Mixed, and Deep Discovery modes, claim verification, and APA 7 citations.",
   "author": {
     "name": "2q9e"
@@ -39,7 +39,7 @@
         "composerIcon": "./assets/deep-research.svg"
       },
       "publication": {
-        "release_notes": "Version 0.4.0 defaults broad plugin requests to extensive, multi-track research; supports explicit time and source targets; and distinguishes search operations, candidate records, reviewed sources, and citations."
+        "release_notes": "Version 0.4.1 targets 500 screened candidate records for broad topics when the host supports it, supports explicit time/source targets, and reports searches, candidates, reviewed sources, and citations separately."
       }
     }
   }
