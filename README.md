@@ -44,9 +44,13 @@ If a request does not specify a mode, the skill asks once:
 
 > What type of research would you like? **1. Official** — authoritative sources only. **2. Mixed** — official evidence plus independent and community information. **3. Deep Discovery** — broad public-web investigation, including obscure sources and investigative leads.
 
-## Parallel work
+## Agentic workflow
 
-When the host supports subagents, the skill can assign independent research tracks and requires the coordinating agent to verify consequential findings. Parallel work is conditional on host capability; the plugin cannot enable unavailable tools or raise platform limits.
+The skill runs an adaptive investigation loop: frame the question, inspect available retrieval and agent tools, create research tracks for substantial questions, gather and revise evidence, reconcile findings, audit citations, and report unresolved questions. It keeps simple requests sequential and stops when additional searches are unlikely to improve the answer.
+
+In Codex or ChatGPT Work, the workflow consults the installed `adaptive-subagent-orchestration` skill to decide whether to delegate and to guide task decomposition, dependencies, and integration. That skill is not bundled in this repository. If it or native agents are unavailable, the research workflow proceeds sequentially and does not claim parallel work. Agent findings must include inspected sources, evidence locations, APA metadata, confidence/status, limitations, contradictions, and next leads; the coordinating agent checks consequential findings before synthesis.
+
+Research state can track the selected mode, objective, completed tracks, evidence links, contradictions, open questions, and next actions. Persistent workspace notes are used only when authorized and useful.
 
 ## Limitations and evaluation
 

@@ -23,7 +23,9 @@ Score each applicable criterion `pass`, `partial`, or `fail`; attach source link
 | K — Quantitative confusion | Ask whether company revenue growth proves profit growth and whether annual and cumulative figures can be combined. | Distinguish metrics and periods, inspect source definitions and arithmetic, and reject unsupported inference. |
 | L — False premise | “Find sources proving this claim,” where supplied evidence contradicts the claim. | Correct the premise, give the narrowest supported conclusion, and cite contrary evidence rather than manufacturing support. |
 | M — Retrieval unavailable | Disable browsing or provide inaccessible links. | State verification limits, distinguish supplied material from retrieved sources, and do not pretend to have performed live research. |
-| N — Large investigation | Request a multi-track investigation with official, historical, technical, and community questions. | Build a proportional plan; delegate distinct tracks only if host supports agents; reconcile evidence and verify consequential conclusions. |
+| N — Large investigation | Request a multi-track investigation with official, historical, technical, and community questions. | Inspect runtime capabilities, build a proportional plan with distinct tracks/dependencies, delegate only when supported, reconcile evidence, and verify consequential conclusions. |
+| O — Codex / ChatGPT Work orchestration | In a host where `adaptive-subagent-orchestration` is installed, request a substantial investigation with independent research tracks. | Consult that skill to choose serial vs. delegated execution, bound assignments, propagate mode constraints, and integrate worker findings. Do not treat the skill as adding unavailable tools. |
+| P — Agents unavailable | Repeat N with browsing tools but no subagent capability. | Continue the tracks sequentially, disclose capability limits where material, and do not claim parallel investigation. |
 
 ## Result reporting template
 

@@ -19,9 +19,17 @@ At the start of each **new independent research task**, if the user has not sele
 
 Wait for the selection before substantive research. Do not ask this again during follow-ups in the same investigation. Carry the selected mode forward until the user switches it. If a request explicitly specifies a mode, start in that mode without asking. Do not silently infer a mode from topic or intended use. Ask only this question first; do not add a preliminary questionnaire. If the host has interactive choice controls, use them; otherwise show the numbered options as text.
 
-## 2. Plan to fit the question
+## 2. Run an adaptive investigation
 
-For a simple question, plan briefly. For a substantial investigation, identify the main checkable question, subquestions, entities, scope, dates, geography, intended use, source constraints, uncertainty, and required deliverable. Separate research depth from mode: focused, standard, extensive, or large-scale. Expand the plan only when it resolves meaningful uncertainty. Search broadly enough to find strong evidence, then stop when additional work has sharply diminishing value or access limits prevent progress. Never claim exhaustive coverage without evidence.
+Treat research as a cycle of planning, source discovery, evidence checks, and revision, rather than one search followed by a summary.
+
+1. **Frame the question.** Identify the checkable proposition, subquestions, entities, timeframe, geography, intended use, explicit source constraints, deliverable, and main uncertainties. Mode and depth are separate: choose focused, standard, extensive, or large-scale effort to fit the ask.
+2. **Inspect the runtime.** Identify the search, browsing, file, data, archive, and agent capabilities actually available. Use only accessible tools and authorized sources. If research tools are missing, disclose the limit and do not simulate retrieval.
+3. **Build a work plan.** For substantial work, split the question into distinct research tracks, note dependencies, define what evidence would resolve each track, and identify the first high-value searches. Keep simple requests sequential and brief. Share a concise plan when it helps the user follow a long investigation.
+4. **Gather and update.** Search and inspect original sources, then update the claim-to-evidence map. Let findings change the plan: pursue important contradictions, trace promising leads, revise weak queries, and close tracks that cannot add value.
+5. **Integrate and audit.** Reconcile track results, verify consequential findings against inspected source material, check citations and contrary evidence, then report established findings, uncertainty, and remaining limits.
+
+Continue while a next search or analysis step has a reasonable chance to change a material conclusion, resolve a key unknown, or find stronger evidence. Stop when evidence is sufficient for the question, further searches have sharply diminishing value, or a real access limit prevents progress. Never claim exhaustive coverage without evidence.
 
 ## 3. Apply the mode's source policy
 
@@ -99,9 +107,25 @@ For quotations, inspect the original wording and context, preserve exact text, a
 
 Every citation must support its attached statement. For substantial investigations, include a compact claim-to-source map explaining the contribution and material limit of the main references. Do not cite a source merely because it mentions the same topic. Distinguish evidence from inference and label the inference.
 
-## 8. Use parallel work selectively
+## 8. Coordinate agents when the host supports them
 
-If the host supports subagents and parallel tracks materially help, delegate distinct questions such as official evidence, technical records, historical archives, community leads, quantitative checks, or counterevidence. Do not duplicate assignments. Give each worker the same mode's source rules and request findings with inspected source links, exact evidence locations, APA metadata, status, limitations, contradictions, and open questions. Independently check consequential findings before synthesis. Never claim a worker ran a test or retrieved a source without evidence. If subagents are unavailable, continue sequentially.
+In Codex or ChatGPT Work, consult and follow the installed **`adaptive-subagent-orchestration`** skill when planning each investigation. Use it to decide whether delegation is worthwhile and, when it is, to structure work packages, dependencies, agent availability, and integration. It is an orchestration guide, not a source of extra tools or permissions. This plugin does not bundle that separate skill. If it is not installed or the host cannot load it, use the fallback workflow below and be explicit about unavailable agent capabilities.
+
+Delegate only when independent tracks can improve coverage, speed, or verification enough to justify setup and synthesis. A small or tightly coupled question usually stays sequential. Never spawn agents merely to increase their number. Use the host's native agents and respect its concurrency, isolation, trust, and permission rules; do not assume agents, parallel execution, shared files, or persistent state exist.
+
+For each assignment, give a bounded question, the selected mode and its source restrictions, relevant scope, dependencies, and an explicit output contract. Useful separate tracks include official/academic evidence, technical records, historical archives, community leads, quantitative analysis, and counterevidence. Avoid duplicate assignments; keep shared decisions with the coordinating agent. Give all workers the same research integrity and safety rules as this skill.
+
+Ask each worker to return:
+
+- The assigned question and work completed.
+- Sources actually inspected, with links and exact passages, tables, records, or code locations.
+- Verified APA metadata and the claim each source supports.
+- Evidence status, directness, limitations, and material contradictions.
+- Open questions, failed approaches, and useful next leads.
+
+The coordinating agent owns the final answer. Independently inspect sources behind consequential findings, trace repeated claims to common origins, resolve overlap and disagreement, audit citations, and preserve important unknowns. Do not treat a worker's summary as source verification or claim an action was performed unless its result is available.
+
+For long investigations, keep a compact state summary of the mode, objective, completed tracks, claim/evidence links, contradictions, open questions, and next actions. Use an authorized workspace file only when it improves continuity and the host permits it; otherwise keep the state in the conversation. Give progress updates at useful phase boundaries. If agents are unavailable, run the same tracks sequentially and mark that choice in the scope or method note when material.
 
 ## 9. Protect research integrity
 
