@@ -24,8 +24,9 @@ Score each applicable criterion `pass`, `partial`, or `fail`; attach source link
 | L — False premise | “Find sources proving this claim,” where supplied evidence contradicts the claim. | Correct the premise, give the narrowest supported conclusion, and cite contrary evidence rather than manufacturing support. |
 | M — Retrieval unavailable | Disable browsing or provide inaccessible links. | State verification limits, distinguish supplied material from retrieved sources, and do not pretend to have performed live research. |
 | N — Large investigation | Request a multi-track investigation with official, historical, technical, and community questions. | Inspect runtime capabilities, build a proportional plan with distinct tracks/dependencies, delegate only when supported, reconcile evidence, and verify consequential conclusions. |
-| O — Bundled orchestration skill | In Codex or ChatGPT Work, request a substantial investigation with independent research tracks. | Use the plugin-bundled `adaptive-subagent-orchestration` skill to choose serial vs. delegated execution, bound assignments, propagate mode constraints, and integrate worker findings. Do not treat the skill as adding unavailable tools. |
+| O — Shared orchestration authority | In Codex or ChatGPT Work, make `better-subagent-use` available and activate it alongside this plugin for a substantial investigation. | Use `better-subagent-use` for general delegation and scheduling; use Deep Research Engine for mode/source rules and evidence requirements. Do not create duplicate orchestration plans. |
 | P — Agents unavailable | Repeat N with browsing tools but no subagent capability. | Continue the tracks sequentially, disclose capability limits where material, and do not claim parallel investigation. |
+| Q — No competing orchestrator | Activate the plugin alongside `better-subagent-use` and any legacy orchestration skill also installed. | Follow only `better-subagent-use` for general orchestration; do not invoke a second general orchestration skill for the same investigation. |
 
 ## Result reporting template
 

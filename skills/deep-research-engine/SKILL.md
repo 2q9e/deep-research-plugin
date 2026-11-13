@@ -109,11 +109,11 @@ Every citation must support its attached statement. For substantial investigatio
 
 ## 8. Coordinate agents when the host supports them
 
-In Codex or ChatGPT Work, consult and follow this plugin's bundled **`adaptive-subagent-orchestration`** skill when planning each investigation. Use it to decide whether delegation is worthwhile and, when it is, to structure work packages, dependencies, agent availability, and integration. The bundled file is `skills/adaptive-subagent-orchestration/SKILL.md`. It is an orchestration guide, not a source of extra tools or permissions. If the host cannot load the skill or does not expose agents, use the fallback workflow below and be explicit about unavailable capabilities.
+Users can invoke Deep Research Engine alone; do not require them to activate another skill manually. In Codex or ChatGPT Work, when **`better-subagent-use`** is available or active, use it as the sole authority for general agent orchestration: whether to delegate, runtime discovery, work-package contracts, scheduling, permissions, isolation, recovery, and integration. This skill owns the research-specific plan, mode rules, source constraints, and evidence requirements to pass into that orchestration. Do not also invoke or follow a second general orchestration skill for the same investigation. The plugin intentionally does not bundle a duplicate orchestration skill, so the standalone `better-subagent-use` skill can work alongside it without competing instructions.
 
-Delegate only when independent tracks can improve coverage, speed, or verification enough to justify setup and synthesis. A small or tightly coupled question usually stays sequential. Never spawn agents merely to increase their number. Use the host's native agents and respect its concurrency, isolation, trust, and permission rules; do not assume agents, parallel execution, shared files, or persistent state exist.
+If `better-subagent-use` is unavailable, use this minimal fallback: inspect actual agent/tool availability; keep small or tightly coupled questions sequential; delegate only distinct, useful research tracks when native agents are available; propagate the selected mode and source rules; and have the coordinator verify consequential evidence before synthesis. Never assume a skill creates tools, permissions, or parallel execution. State capability limits when material.
 
-For each assignment, give a bounded question, the selected mode and its source restrictions, relevant scope, dependencies, and an explicit output contract. Useful separate tracks include official/academic evidence, technical records, historical archives, community leads, quantitative analysis, and counterevidence. Avoid duplicate assignments; keep shared decisions with the coordinating agent. Give all workers the same research integrity and safety rules as this skill.
+When `better-subagent-use` is active, the rest of this section is the **research-specific contract** to pass into its orchestration—not a second plan for agent scheduling or lifecycle. Suggested research tracks include official/academic evidence, technical records, historical archives, community leads, quantitative analysis, and counterevidence. For every track, preserve the selected mode, its source restrictions, relevant scope, and research integrity rules.
 
 Ask each worker to return:
 
@@ -123,9 +123,9 @@ Ask each worker to return:
 - Evidence status, directness, limitations, and material contradictions.
 - Open questions, failed approaches, and useful next leads.
 
-The coordinating agent owns the final answer. Independently inspect sources behind consequential findings, trace repeated claims to common origins, resolve overlap and disagreement, audit citations, and preserve important unknowns. Do not treat a worker's summary as source verification or claim an action was performed unless its result is available.
+The coordinating agent owns the research synthesis. Independently inspect sources behind consequential findings, trace repeated claims to common origins, resolve evidentiary disagreements, audit citations, and preserve important unknowns. Do not treat a worker's summary as source verification or claim an action was performed unless its result is available.
 
-For long investigations, keep a compact state summary of the mode, objective, completed tracks, claim/evidence links, contradictions, open questions, and next actions. Use an authorized workspace file only when it improves continuity and the host permits it; otherwise keep the state in the conversation. Give progress updates at useful phase boundaries. If agents are unavailable, run the same tracks sequentially and mark that choice in the scope or method note when material.
+For long investigations, keep the research state limited to the mode, objective, evidence found per track, claim/evidence links, contradictions, open questions, and next research actions. Let the orchestration skill handle worker status and scheduling when active. Use an authorized workspace file only when it improves continuity and the host permits it; otherwise keep the research state in conversation context. If agents are unavailable, run the same tracks sequentially and mark that choice in the scope or method note when material.
 
 ## 9. Protect research integrity
 
