@@ -2,6 +2,7 @@
 name: deep-research-engine
 description: Conduct an Official, Mixed, or Deep Discovery investigation when the user invokes Deep Research Engine or requests one of its research modes. Do not activate for standalone better-research requests.
 ---
+<!-- Copyright (c) 2026 2q9e. See ../../LICENSE for terms. -->
 
 # Deep Research Engine
 

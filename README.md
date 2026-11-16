@@ -1,3 +1,5 @@
+<!-- Copyright (c) 2026 2q9e. See LICENSE for terms. -->
+
 # Deep Research Engine
 
 An evidence-first research plugin for Codex, ChatGPT, Claude Code, Cursor, and compatible skill hosts. It packages a repeatable research workflow; it does not bundle a search engine, MCP server, browser, or other retrieval service. It uses the capabilities available in the host and is explicit when those capabilities are missing.

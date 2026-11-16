@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Copyright (c) 2026 2q9e. See ../LICENSE for terms.
+
 set -euo pipefail
 
 plugin_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"

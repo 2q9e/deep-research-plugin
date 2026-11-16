@@ -2,6 +2,7 @@
 name: deep-research-orchestration
 description: Coordinate agent work only for investigations initiated with the Deep Research Engine plugin. Plan multi-track research, independent source checks, and counterevidence work when delegation is useful; do not activate for standalone better-research requests.
 ---
+<!-- Copyright (c) 2026 2q9e. See ../../LICENSE for terms. -->
 
 # Deep research orchestration
 

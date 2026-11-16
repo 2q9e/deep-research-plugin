@@ -1,3 +1,5 @@
+<!-- Copyright (c) 2026 2q9e. See ../LICENSE for terms. -->
+
 # Research behavior evaluation scenarios
 
 These scenarios define observable checks for the skill. They are evaluation specifications, not live benchmark results. To evaluate an implementation, give each prompt to a host with the skill enabled, record the answer and sources actually retrieved, and score each expected behavior. Do not claim a pass unless the behavior was observed.

@@ -1,3 +1,5 @@
+<!-- Copyright (c) 2026 2q9e. See LICENSE for terms. -->
+
 # Privacy Policy
 
 **Effective date: November 13, 2026**
